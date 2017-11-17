@@ -1,0 +1,501 @@
+<xConfiguration>
+
+<paramGroupTab name="Audio">
+
+     
+   <paramGroupAccordion name="General Settings">
+      <element key="ConfigurationAudioInputMicrophoneMode" mapToKey="Configuration/Audio/Input/MicrophoneMode" name="Audio Input MicrophoneMode" type="Literal" connectivity="0" editable="true">
+        <valuespace>
+          <value>Focused</value>
+          <value>Wide</value>
+        </valuespace>
+      </element>
+  </paramGroupAccordion>
+  
+  <paramGroupAccordion name="SoundsAndAlerts">
+      <element key="ConfigurationAudioSoundsAndAlertsRingTone" mapToKey="Configuration/Audio/SoundsAndAlerts/RingTone" name="Audio SoundsAndAlerts RingTone" type="String" connectivity="0" editable="true">
+        <valuespace>
+          <min>1</min>
+          <max>100</max>
+        </valuespace>
+      </element>
+      <element key="ConfigurationAudioSoundsAndAlertsRingVolume" mapToKey="Configuration/Audio/SoundsAndAlerts/RingVolume" name="Audio SoundsAndAlerts RingVolume" type="Integer" connectivity="0" editable="true">
+        <valuespace>
+          <min>0</min>
+          <max>100</max>
+        </valuespace>
+      </element>
+   </paramGroupAccordion>
+ </paramGroupTab>
+ 
+
+ <!--
+ 
+ 
+ <paramGroupTab name="Conference"> 
+    <paramGroupAccordion name="AutoAnswer">
+     <element key="ConfigurationConferenceAutoAnswerDelay" mapToKey="Configuration/Conference/AutoAnswer/Delay" name="Conference AutoAnswer Delay" type="Integer" connectivity="0" editable="true">
+        <valuespace>
+          <min>0</min>
+          <max>50</max>
+        </valuespace>
+      </element>
+      <element key="ConfigurationConferenceAutoAnswerMode" mapToKey="Configuration/Conference/AutoAnswer/Mode" name="Conference AutoAnswer Mode" type="Literal" connectivity="0" editable="true">
+        <valuespace>
+          <value>Off</value>
+          <value>On</value>
+        </valuespace>
+      </element>
+      <element key="ConfigurationConferenceAutoAnswerMute" mapToKey="Configuration/Conference/AutoAnswer/Mute" name="Conference AutoAnswer Mute" type="Literal" connectivity="0" editable="true">
+        <valuespace>
+          <value>Off</value>
+          <value>On</value>
+        </valuespace>
+      </element>
+    </paramGroupAccordion>  
+      
+    <paramGroupAccordion name="DefaultCall">  
+       <element key="ConfigurationConferenceDefaultCallProtocol" mapToKey="Configuration/Conference/DefaultCall/Protocol" name="Conference DefaultCall Protocol" type="Literal" connectivity="0" editable="true">
+        <valuespace>
+          <value>Auto</value>
+          <value>H320</value>
+          <value>H323</value>
+          <value>Sip</value>
+          <value>Spark</value>
+        </valuespace>
+      </element>
+      <element key="ConfigurationConferenceDefaultCallRate" mapToKey="Configuration/Conference/DefaultCall/Rate" name="Conference DefaultCall Rate" type="Integer" connectivity="0" editable="true">
+        <valuespace>
+          <min>64</min>
+          <max>3072</max>
+        </valuespace>
+      </element>
+      
+    </paramGroupAccordion>
+
+    <paramGroupAccordion name="DoNotDisturb">    
+      <element key="ConfigurationConferenceDoNotDisturbDefaultTimeout" mapToKey="Configuration/Conference/DoNotDisturb/DefaultTimeout" name="Conference DoNotDisturb DefaultTimeout" type="Integer" connectivity="0" editable="true">
+        <valuespace>
+          <min>1</min>
+          <max>1440</max>
+        </valuespace>
+      </element>
+    </paramGroupAccordion>
+
+    <paramGroupAccordion name="Encryption">    
+      <element key="ConfigurationConferenceEncryptionMode" mapToKey="Configuration/Conference/Encryption/Mode" name="Conference Encryption Mode" type="Literal" connectivity="0" editable="true">
+        <valuespace>
+          <value>BestEffort</value>
+          <value>Off</value>
+          <value>On</value>
+        </valuespace>
+      </element>
+      
+    </paramGroupAccordion>
+  </paramGroupTab>
+  
+  
+  
+  
+  
+ <paramGroupTab name="Network">
+    
+  <paramGroupAccordion name="DNS">
+  <element key="ConfigurationNetworkDNSDomainName" mapToKey="Configuration/Network[1]/DNS/Domain/Name" name="Network DNS Domain Name" type="String" connectivity="0" editable="true">
+    <valuespace>
+      <min>0</min>
+      <max>64</max>
+    </valuespace>
+  </element>
+  
+  <paramGroupRepeatSingle name="Server 1 Address">
+  <element key="ConfigurationNetworkDNSServerAddress" mapToKey="Configuration/Network[1]/DNS/Server[1]/Address" name="Network DNS Server Address" type="String" connectivity="0" editable="true">
+    <valuespace>
+      <min>0</min>
+      <max>64</max>
+    </valuespace>
+  </element>
+  </paramGroupRepeatSingle>
+  
+  <paramGroupRepeatSingle name="Server 2 Address">
+  <element key="ConfigurationNetworkDNSServer2Address" mapToKey="Configuration/Network[1]/DNS/Server[2]/Address" name="Network DNS Server 2 Address" type="String" connectivity="0" editable="true">
+    <valuespace>
+      <min>0</min>
+      <max>64</max>
+    </valuespace>
+  </element>
+  </paramGroupRepeatSingle>
+  
+  
+  <paramGroupRepeatSingle name="Server 3 Address">
+  <element key="ConfigurationNetworkDNSServer3Address" mapToKey="Configuration/Network[1]/DNS/Server[3]/Address" name="Network DNS Server 3 Address" type="String" connectivity="0" editable="true">
+    <valuespace>
+      <min>0</min>
+      <max>64</max>
+    </valuespace>
+  </element>
+  </paramGroupRepeatSingle>
+  
+  </paramGroupAccordion>
+  
+  
+  
+  
+  <paramGroupAccordion name="IEEE8021X">
+  <element key="ConfigurationNetworkIEEE8021XAnonymousIdentity" mapToKey="Configuration/Network[1]/IEEE8021X/AnonymousIdentity" name="Network IEEE8021X AnonymousIdentity" type="String" connectivity="0" editable="true">
+    <valuespace>
+      <min>0</min>
+      <max>64</max>
+    </valuespace>
+  </element>
+  
+  <paramGroupLineDemark name="none"/>
+  <paramGroupBold name="Eap">
+
+  <element key="ConfigurationNetworkIEEE8021XEapMd5" mapToKey="Configuration/Network[1]/IEEE8021X/Eap/Md5" name="Network IEEE8021X Eap Md5" type="Literal" connectivity="0" editable="true">
+    <valuespace>
+      <value>Off</value>
+      <value>On</value>
+    </valuespace>
+  </element>
+  <element key="ConfigurationNetworkIEEE8021XEapPeap" mapToKey="Configuration/Network[1]/IEEE8021X/Eap/Peap" name="Network IEEE8021X Eap Peap" type="Literal" connectivity="0" editable="true">
+    <valuespace>
+      <value>Off</value>
+      <value>On</value>
+    </valuespace>
+  </element>
+  <element key="ConfigurationNetworkIEEE8021XEapTls" mapToKey="Configuration/Network[1]/IEEE8021X/Eap/Tls" name="Network IEEE8021X Eap Tls" type="Literal" connectivity="0" editable="true">
+    <valuespace>
+      <value>Off</value>
+      <value>On</value>
+    </valuespace>
+  </element>
+  <element key="ConfigurationNetworkIEEE8021XEapTtls" mapToKey="Configuration/Network[1]/IEEE8021X/Eap/Ttls" name="Network IEEE8021X Eap Ttls" type="Literal" connectivity="0" editable="true">
+    <valuespace>
+      <value>Off</value>
+      <value>On</value>
+    </valuespace>
+  </element>
+  </paramGroupBold>
+  <element key="ConfigurationNetworkIEEE8021XIdentity" mapToKey="Configuration/Network[1]/IEEE8021X/Identity" name="Network IEEE8021X Identity" type="String" connectivity="0" editable="true">
+    <valuespace>
+      <min>0</min>
+      <max>64</max>
+    </valuespace>
+  </element>
+  <element key="ConfigurationNetworkIEEE8021XMode" mapToKey="Configuration/Network[1]/IEEE8021X/Mode" name="Network IEEE8021X Mode" type="Literal" connectivity="0" editable="true">
+    <valuespace>
+      <value>Off</value>
+      <value>On</value>
+    </valuespace>
+  </element>
+  <element key="ConfigurationNetworkIEEE8021XPassword" mapToKey="Configuration/Network[1]/IEEE8021X/Password" name="Network IEEE8021X Password" type="Literal" connectivity="0" editable="true">
+    <valuespace>
+      <value>True</value>
+      <value>32</value>
+      <value>0</value>
+    </valuespace>
+  </element>
+  <element key="ConfigurationNetworkIEEE8021XTlsVerify" mapToKey="Configuration/Network[1]/IEEE8021X/TlsVerify" name="Network IEEE8021X TlsVerify" type="Literal" connectivity="0" editable="true">
+    <valuespace>
+      <value>Off</value>
+      <value>On</value>
+    </valuespace>
+  </element>
+  <element key="ConfigurationNetworkIEEE8021XUseClientCertificate" mapToKey="Configuration/Network[1]/IEEE8021X/UseClientCertificate" name="Network IEEE8021X UseClientCertificate" type="Literal" connectivity="0" editable="true">
+    <valuespace>
+      <value>Off</value>
+      <value>On</value>
+    </valuespace>
+  </element>
+  </paramGroupAccordion>
+  
+  <element key="ConfigurationNetworkIPStack" mapToKey="Configuration/Network[1]/IPStack" name="Network IPStack" type="Literal" connectivity="0" editable="true">
+    <valuespace>
+      <value>Dual</value>
+      <value>IPv4</value>
+      <value>IPv6</value>
+    </valuespace>
+  </element>
+  
+  <paramGroupAccordion name="IPv4">
+  <element key="ConfigurationNetworkIPv4Address" mapToKey="Configuration/Network[1]/IPv4/Address" name="Network IPv4 Address" type="String" connectivity="0" editable="true">
+    <valuespace>
+      <min>0</min>
+      <max>64</max>
+    </valuespace>
+  </element>
+  <element key="ConfigurationNetworkIPv4Assignment" mapToKey="Configuration/Network[1]/IPv4/Assignment" name="Network IPv4 Assignment" type="Literal" connectivity="0" editable="true">
+    <valuespace>
+      <value>DHCP</value>
+      <value>Static</value>
+    </valuespace>
+  </element>
+  <element key="ConfigurationNetworkIPv4Gateway" mapToKey="Configuration/Network[1]/IPv4/Gateway" name="Network IPv4 Gateway" type="String" connectivity="0" editable="true">
+    <valuespace>
+      <min>0</min>
+      <max>64</max>
+    </valuespace>
+  </element>
+  <element key="ConfigurationNetworkIPv4SubnetMask" mapToKey="Configuration/Network[1]/IPv4/SubnetMask" name="Network IPv4 SubnetMask" type="String" connectivity="0" editable="true">
+    <valuespace>
+      <min>0</min>
+      <max>64</max>
+    </valuespace>
+  </element>
+  </paramGroupAccordion>
+  
+  <paramGroupAccordion name="IPv6">
+  <element key="ConfigurationNetworkIPv6Address" mapToKey="Configuration/Network[1]/IPv6/Address" name="Network IPv6 Address" type="String" connectivity="0" editable="true">
+    <valuespace>
+      <min>0</min>
+      <max>64</max>
+    </valuespace>
+  </element>
+  <element key="ConfigurationNetworkIPv6Assignment" mapToKey="Configuration/Network[1]/IPv6/Assignment" name="Network IPv6 Assignment" type="Literal" connectivity="0" editable="true">
+    <valuespace>
+      <value>Autoconf</value>
+      <value>DHCPv6</value>
+      <value>Static</value>
+    </valuespace>
+  </element>
+  <element key="ConfigurationNetworkIPv6DHCPOptions" mapToKey="Configuration/Network[1]/IPv6/DHCPOptions" name="Network IPv6 DHCPOptions" type="Literal" connectivity="0" editable="true">
+    <valuespace>
+      <value>Off</value>
+      <value>On</value>
+    </valuespace>
+  </element>
+  <element key="ConfigurationNetworkIPv6Gateway" mapToKey="Configuration/Network[1]/IPv6/Gateway" name="Network IPv6 Gateway" type="String" connectivity="0" editable="true">
+    <valuespace>
+      <min>0</min>
+      <max>64</max>
+    </valuespace>
+  </element>
+  </paramGroupAccordion>
+  
+  <element key="ConfigurationNetworkMTU" mapToKey="Configuration/Network[1]/MTU" name="Network MTU" type="Integer" connectivity="0" editable="true">
+    <valuespace>
+      <min>576</min>
+      <max>1500</max>
+    </valuespace>
+  </element>
+  
+  <paramGroupAccordion name="QoS">
+  <paramGroupBold name="Diffserv">
+  <element key="ConfigurationNetworkQoSDiffservAudio" mapToKey="Configuration/Network[1]/QoS/Diffserv/Audio" name="Network QoS Diffserv Audio" type="Integer" connectivity="0" editable="true">
+    <valuespace>
+      <min>0</min>
+      <max>63</max>
+    </valuespace>
+  </element>
+  <element key="ConfigurationNetworkQoSDiffservData" mapToKey="Configuration/Network[1]/QoS/Diffserv/Data" name="Network QoS Diffserv Data" type="Integer" connectivity="0" editable="true">
+    <valuespace>
+      <min>0</min>
+      <max>63</max>
+    </valuespace>
+  </element>
+  <element key="ConfigurationNetworkQoSDiffservICMPv6" mapToKey="Configuration/Network[1]/QoS/Diffserv/ICMPv6" name="Network QoS Diffserv ICMPv6" type="Integer" connectivity="0" editable="true">
+    <valuespace>
+      <min>0</min>
+      <max>63</max>
+    </valuespace>
+  </element>
+  <element key="ConfigurationNetworkQoSDiffservNTP" mapToKey="Configuration/Network[1]/QoS/Diffserv/NTP" name="Network QoS Diffserv NTP" type="Integer" connectivity="0" editable="true">
+    <valuespace>
+      <min>0</min>
+      <max>63</max>
+    </valuespace>
+  </element>
+  <element key="ConfigurationNetworkQoSDiffservSignalling" mapToKey="Configuration/Network[1]/QoS/Diffserv/Signalling" name="Network QoS Diffserv Signalling" type="Integer" connectivity="0" editable="true">
+    <valuespace>
+      <min>0</min>
+      <max>63</max>
+    </valuespace>
+  </element>
+  <element key="ConfigurationNetworkQoSDiffservVideo" mapToKey="Configuration/Network[1]/QoS/Diffserv/Video" name="Network QoS Diffserv Video" type="Integer" connectivity="0" editable="true">
+    <valuespace>
+      <min>0</min>
+      <max>63</max>
+    </valuespace>
+  </element>
+  </paramGroupBold>
+  
+  <element key="ConfigurationNetworkQoSMode" mapToKey="Configuration/Network[1]/QoS/Mode" name="Network QoS Mode" type="Literal" connectivity="0" editable="true">
+    <valuespace>
+      <value>Diffserv</value>
+      <value>Off</value>
+    </valuespace>
+  </element>
+  </paramGroupAccordion>
+  
+  <element key="ConfigurationNetworkRemoteAccessAllow" mapToKey="Configuration/Network[1]/RemoteAccess/Allow" name="Network RemoteAccess Allow" type="String" connectivity="0" editable="true">
+    <valuespace>
+      <min>0</min>
+      <max>255</max>
+    </valuespace>
+  </element>
+  
+  
+  <paramGroupAccordion name="VLAN Voice">
+  <element key="ConfigurationNetworkVLANVoiceMode" mapToKey="Configuration/Network[1]/VLAN/Voice/Mode" name="Network VLAN Voice Mode" type="Literal" connectivity="0" editable="true">
+    <valuespace>
+      <value>Auto</value>
+      <value>Manual</value>
+      <value>Off</value>
+    </valuespace>
+  </element>
+  <element key="ConfigurationNetworkVLANVoiceVlanId" mapToKey="Configuration/Network[1]/VLAN/Voice/VlanId" name="Network VLAN Voice VlanId" type="Integer" connectivity="0" editable="true">
+    <valuespace>
+      <min>1</min>
+      <max>4094</max>
+    </valuespace>
+  </element>
+  </paramGroupAccordion>
+  
+  </paramGroupTab>
+
+
+ <paramGroupTab name="Video">
+   <paramGroupAccordion name="Input">
+      <paramGroupRepeatSection name="Connector 1">
+        <element key="ConfigurationVideoInputConnectorCameraControlCameraId" mapToKey="Configuration/Video/Input/Connector[1]/CameraControl/CameraId" name="Video Input Connector CameraControl CameraId" type="Literal" connectivity="0" editable="true">
+        <valuespace>
+          <value>1</value>
+        </valuespace>
+      </element>
+      <element key="ConfigurationVideoInputConnectorCameraControlMode" mapToKey="Configuration/Video/Input/Connector[1]/CameraControl/Mode" name="Video Input Connector CameraControl Mode" type="Literal" connectivity="0" editable="true">
+        <valuespace>
+          <value>Off</value>
+        </valuespace>
+      </element>
+   
+      </paramGroupRepeatSection>
+      <paramGroupRepeatSection name="Connector 2">
+      <element key="ConfigurationVideoInputConnector2CameraControlCameraId" mapToKey="Configuration/Video/Input/Connector[2]/CameraControl/CameraId" name="Video Input Connector 2 CameraControl CameraId" type="Literal" connectivity="0" editable="true">
+        <valuespace>
+          <value>1</value>
+        </valuespace>
+      </element>
+      <element key="ConfigurationVideoInputConnector2CameraControlMode" mapToKey="Configuration/Video/Input/Connector[2]/CameraControl/Mode" name="Video Input Connector 2 CameraControl Mode" type="Literal" connectivity="0" editable="true">
+        <valuespace>
+          <value>Off</value>
+        </valuespace>
+      </element>
+      
+      </paramGroupRepeatSection>
+  </paramGroupAccordion>
+   
+
+ 
+  <paramGroupAccordion name="Output">
+  <paramGroupRepeatSection name="Connector 1">
+      <element key="ConfigurationVideoOutputConnectorResolution" mapToKey="Configuration/Video/Output/Connector[1]/Resolution" name="Video Output Connector Resolution" type="Literal" connectivity="0" editable="true">
+        <valuespace>
+          <value>1920_1080_60</value>
+        </valuespace>
+      </element>
+    </paramGroupRepeatSection>
+
+  <paramGroupRepeatSection name="Connector 2">
+      <element key="ConfigurationVideoOutputConnector2OverscanLevel" mapToKey="Configuration/Video/Output/Connector[2]/OverscanLevel" name="Video Output Connector 2 OverscanLevel" type="Literal" connectivity="0" editable="true">
+        <valuespace>
+          <value>High</value>
+          <value>Medium</value>
+          <value>None</value>
+        </valuespace>
+      </element>
+      <element key="ConfigurationVideoOutputConnector2Resolution" mapToKey="Configuration/Video/Output/Connector[2]/Resolution" name="Video Output Connector 2 Resolution" type="Literal" connectivity="0" editable="true">
+        <valuespace>
+          <value>640_480_60</value>
+          <value>800_600_60</value>
+          <value>1024_768_60</value>
+          <value>1280_1024_60</value>
+          <value>1366_768_60</value>
+          <value>1600_1200_60</value>
+          <value>1680_1050_60</value>
+          <value>1920_1080_50</value>
+          <value>1920_1080_60</value>
+          <value>1920_1200_60</value>
+          <value>Auto</value>
+        </valuespace>
+      </element>
+</paramGroupRepeatSection>
+
+    <paramGroupRepeatSection name="MISC">
+        <paramGroupLineDemark name="===========================LINE DEMARK=====================" ></paramGroupLineDemark>
+        <paramGroupBold name="CameraControl (Hetergenous section - NOT a usual repeat)">
+            <element key="ConfigurationVideoOutputConnector2CameraControlID" mapToKey="Configuration/Video/Output/Connector[2]/CameraControl/ID" name="Video Output Connector 2 CameraControl ID" type="Literal" connectivity="0" editable="true">
+                <valuespace>
+                    <value>High</value>
+                    <value>Medium</value>
+                    <value>None</value>
+                </valuespace>
+            </element>
+        </paramGroupBold>
+    </paramGroupRepeatSection>
+</paramGroupAccordion>
+  
+  <paramGroupAccordion name="Presentation">
+  <element key="ConfigurationVideoPresentationDefaultSource" mapToKey="Configuration/Video/Presentation/DefaultSource" name="Video Presentation DefaultSource" type="Literal" connectivity="0" editable="true">
+    <valuespace>
+      <value>2</value>
+    </valuespace>
+  </element>
+  </paramGroupAccordion>
+  
+ 
+  <paramGroupAccordion name="Selfview">
+      <paramGroupBold name="Default">
+      <element key="ConfigurationVideoSelfviewDefaultFullscreenMode" mapToKey="Configuration/Video/Selfview/Default/FullscreenMode" name="Video Selfview Default FullscreenMode" type="Literal" connectivity="0" editable="true">
+        <valuespace>
+          <value>Current</value>
+          <value>Off</value>
+          <value>On</value>
+        </valuespace>
+      </element>
+      <element key="ConfigurationVideoSelfviewDefaultMode" mapToKey="Configuration/Video/Selfview/Default/Mode" name="Video Selfview Default Mode" type="Literal" connectivity="0" editable="true">
+        <valuespace>
+          <value>Current</value>
+          <value>Off</value>
+          <value>On</value>
+        </valuespace>
+      </element>
+      <element key="ConfigurationVideoSelfviewDefaultOnMonitorRole" mapToKey="Configuration/Video/Selfview/Default/OnMonitorRole" name="Video Selfview Default OnMonitorRole" type="Literal" connectivity="0" editable="true">
+        <valuespace>
+          <value>Current</value>
+          <value>First</value>
+          <value>Fourth</value>
+          <value>Second</value>
+          <value>Third</value>
+        </valuespace>
+      </element>
+      <element key="ConfigurationVideoSelfviewDefaultPIPPosition" mapToKey="Configuration/Video/Selfview/Default/PIPPosition" name="Video Selfview Default PIPPosition" type="Literal" connectivity="0" editable="true">
+        <valuespace>
+          <value>CenterLeft</value>
+          <value>CenterRight</value>
+          <value>Current</value>
+          <value>LowerLeft</value>
+          <value>LowerRight</value>
+          <value>UpperCenter</value>
+          <value>UpperLeft</value>
+          <value>UpperRight</value>
+        </valuespace>
+      </element>
+      </paramGroupBold>
+      <paramGroupLineDemark name="none"></paramGroupLineDemark>
+      
+     <paramGroupBold name="OnCall">
+        <element key="ConfigurationVideoSelfviewOnCallMode" mapToKey="Configuration/Video/Selfview/OnCall/Mode" name="Video Selfview OnCall Mode" type="Literal" connectivity="0" editable="true">
+          <valuespace>
+          <value>Off</value>
+          <value>On</value>
+        </valuespace>
+         </element>
+       </paramGroupBold>
+     
+  </paramGroupAccordion>
+  
+</paramGroupTab>
+  -->
+  
+</xConfiguration>
